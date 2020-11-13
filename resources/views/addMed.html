@@ -1,0 +1,43 @@
+
+        <div>
+            <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4>Add medicine</h4>
+            </div>
+            <div >
+
+                <div class="alert alert-danger" ng-if="errors.length > 0">
+                    <ul>
+                        <li ng-repeat="error in errors">@{{ error }}</li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" ng-model="medicine.name">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" rows="5" class="form-control"
+                              ng-model="medicine.description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="text" name="amount" class="form-control" ng-model="medicine.amount">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" class="form-control" ng-model="medicine.price">
+                </div>
+                <div class="form-group">
+                    <label for="storedDate">Stored Date</label>
+                    <input type="text" name="storedDate" class="form-control" ng-model="medicine.storedDate">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="addmMed()">Submit</button>
+            </div>
+        </div>
